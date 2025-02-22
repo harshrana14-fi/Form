@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Full Page Background - Clear and Animated */
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; /* Ensures scrolling works properly */
+}
+
+/* Floating Orbs Background */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(10px);
+    animation: float 6s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+.orb1 {
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    left: 15%;
+    animation-duration: 7s;
+}
+
+.orb2 {
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 70%;
+    animation-duration: 5s;
+}
+
+.orb3 {
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    right: 20%;
+    animation-duration: 6s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-20px); }
+}
+
+/* Form Wrapper */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent but not blurry */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+/* Heading */
+h1 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.input-group label {
+    color: #fff;
+    font-weight: 500;
+    display: block;
+}
+
+.input-group input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.input-group input:focus, textarea:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Buttons */
+.btn-group {
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: #4CAF50;
+}
+
+button[type="submit"]:hover {
+    background: #45a049;
+    transform: scale(1.1);
+}
+
+/* Reset Button */
+button[type="reset"] {
+    background: #f44336;
+}
+
+button[type="reset"]:hover {
+    background: #d32f2f;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+ </style>
+</head>
+<body>
+
+    <!-- Floating Animated Elements -->
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <div class="container">
+    
+        <h1></b>Registration Form📝</b></h1>
+        <hr>
+        <br>
+        <form id="registrationForm">
+            <div class="input-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="roll_no">Your Roll No</label>
+                <input type="text" id="roll_no" name="roll_no">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Your Email ID</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="input-group">
+                <label for="dob">Your Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+<br>
+            <div class="input-group">
+                <label for="ggsipu-colleges">Select College/University:</label>
+                <select name="ggsipu-colleges" id="ggsipu-colleges">
+                    <option value="">-- Select an Institution --</option>
+                    <option value="usict">University School of Information, Communication & Technology (USICT)</option>
+                    <option value="mait">Maharaja Agrasen Institute of Technology (MAIT)</option>
+                    <option value="bpit">Bhagwan Parshuram Institute of Technology (BPIT)</option>
+                    <option value="msit">Maharaja Surajmal Institute of Technology (MSIT)</option>
+                    <option value="gtbit">Guru Tegh Bahadur Institute of Technology (GTBIT)</option>
+                    <option value="npt">Northern India Engineering College (NIEC)</option>
+                    <option value="ait">Ambedkar Institute of Technology (AIT)</option>
+                    <option value="bvcoe">Bharati Vidyapeeth's College of Engineering (BVCOE)</option>
+                    <option value="dtu">Delhi Technological University (DTU) - Affiliated</option>
+                    <option value="igdtuw">Indira Gandhi Delhi Technical University for Women (IGDTUW)</option>
+                </select>
+            </div>
+<br>
+            <div class="input-group">
+                <label for="Branch">Your Branch:</label>
+                <select name="Branch" id="Branch">
+                    <option value="">-- Select your Branch --</option>
+                    <option value="CSE">Computer Science and Engineering (CSE)</option>
+                    <option value="IT">Information Technology (IT)</option>
+                    <option value="ME">Mechanical Engineering (ME)</option>
+                    <option value="EE">Electrical Engineering (EE)</option>
+                    <option value="ECE">Electrical Communication Engineering (ECE)</option>
+                    <option value="CSE-Ds">Computer Scince Eng with Data Science (CSE-Ds)</option>
+                    <option value="CSE-AIML">Computer Scince Eng with Artificial Inntelligence (CSE-AIML)</option>
+                    <option value="IIOT">Industrial Internet of Things (IIOT)</option>
+                    <option value="Biotech">Biotechnology (Biotech)</option>
+                    <option value="Enrg">Energy Engineering (Enrg)</option>
+                </select>
+            </div>
+
+           
+<br>
+            <div class="input-group">
+                <label>Are you eligible?</label>
+                <input type="checkbox" id="eligible">
+            </div>
+<br>
+            <div class="input-group">
+                <label>Your Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <br>
+
+            <div class="input-group">
+                <label for="about">Write About Yourself</label>
+                <textarea id="about" name="about" rows="4"></textarea>
+            </div>
+            
+            <div class="btn-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
