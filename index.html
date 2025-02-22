@@ -158,6 +158,13 @@ button[type="reset"]:hover {
         padding: 15px;
     }
 }
+             select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
  </style>
 </head>
 <body>
@@ -193,10 +200,47 @@ button[type="reset"]:hover {
                 <input type="date" id="dob" name="dob">
             </div>
 
+            <br>
+            <div class="input-group">
+                <label for="ggsipu-colleges">Select College/University:</label>
+                <select name="ggsipu-colleges" id="ggsipu-colleges">
+                    <option value="">-- Select an Institution --</option>
+                    <option value="usict">University School of Information, Communication & Technology (USICT)</option>
+                    <option value="mait">Maharaja Agrasen Institute of Technology (MAIT)</option>
+                    <option value="bpit">Bhagwan Parshuram Institute of Technology (BPIT)</option>
+                    <option value="msit">Maharaja Surajmal Institute of Technology (MSIT)</option>
+                    <option value="gtbit">Guru Tegh Bahadur Institute of Technology (GTBIT)</option>
+                    <option value="npt">Northern India Engineering College (NIEC)</option>
+                    <option value="ait">Ambedkar Institute of Technology (AIT)</option>
+                    <option value="bvcoe">Bharati Vidyapeeth's College of Engineering (BVCOE)</option>
+                    <option value="dtu">Delhi Technological University (DTU) - Affiliated</option>
+                    <option value="igdtuw">Indira Gandhi Delhi Technical University for Women (IGDTUW)</option>
+                </select>
+            </div>
+<br>
+            <div class="input-group">
+                <label for="Branch">Your Branch:</label>
+                <select name="Branch" id="Branch">
+                    <option value="">-- Select your Branch --</option>
+                    <option value="CSE">Computer Science and Engineering (CSE)</option>
+                    <option value="IT">Information Technology (IT)</option>
+                    <option value="ME">Mechanical Engineering (ME)</option>
+                    <option value="EE">Electrical Engineering (EE)</option>
+                    <option value="ECE">Electrical Communication Engineering (ECE)</option>
+                    <option value="CSE-Ds">Computer Scince Eng with Data Science (CSE-Ds)</option>
+                    <option value="CSE-AIML">Computer Scince Eng with Artificial Inntelligence (CSE-AIML)</option>
+                    <option value="IIOT">Industrial Internet of Things (IIOT)</option>
+                    <option value="Biotech">Biotechnology (Biotech)</option>
+                    <option value="Enrg">Energy Engineering (Enrg)</option>
+                </select>
+            </div>
+<br>
+
             <div class="input-group">
                 <label>Are you eligible?</label>
                 <input type="checkbox" id="eligible">
             </div>
+            <br>
 
             <div class="input-group">
                 <label>Your Gender:</label>
